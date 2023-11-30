@@ -26,7 +26,7 @@
                         </th>
                         <th>Voucher's Name</th>
                         <th>Status</th>
-                        <th>Description</th>
+                        <th>Voucher's discount</th>
                         <th style="width:30px;"></th>
                     </tr>
                 </thead>

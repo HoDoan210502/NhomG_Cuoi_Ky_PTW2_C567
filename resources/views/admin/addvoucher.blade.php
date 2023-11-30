@@ -33,8 +33,11 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Voucher's Description</label>
+                        <label for="exampleInputPassword1">Voucher's discount</label>
                         <textarea type="password" rows="8" class="form-control" id="exampleInputPassword1" maxlength="200" placeholder="Description" name="vou_desc"></textarea>
+
+                        <!-- Thêm span mới cho thông báo lỗi -->
+                        <span id="vou_desc-error" class="text-danger"></span>
                     </div>
 
                     <button type="submit" name="add_vou" class="btn btn-info">Add Voucher</button>
@@ -47,13 +50,25 @@
 <script>
     function validateForm() {
         var vou_name = document.getElementById("exampleInputEmail1").value;
+        var vou_desc = document.getElementById("exampleInputPassword1").value;
+
+        // Kiểm tra trường Voucher's Name
         if (vou_name.trim() === "") {
             document.getElementById("vou_name-error").textContent = "Voucher's Name is required.";
             return false; // Prevent form submission
         } else {
             document.getElementById("vou_name-error").textContent = ""; // Clear any previous error messages
-            return true; // Allow form submission
         }
+
+        // Kiểm tra trường Voucher's discount
+        if (vou_desc.trim() === "") {
+            document.getElementById("vou_desc-error").textContent = "Voucher's discount is required.";
+            return false; // Prevent form submission
+        } else {
+            document.getElementById("vou_desc-error").textContent = ""; // Clear any previous error messages
+        }
+
+        return true; // Allow form submission
     }
 </script>
 @endsection

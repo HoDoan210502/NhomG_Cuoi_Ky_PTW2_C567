@@ -24,8 +24,11 @@
                         <span id="vou_name-error" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Voucher's Description</label>
+                        <label for="exampleInputPassword1">Voucher's Discount</label>
                         <textarea value="{{($edit_value->vou_desc)}}" rows="8" class="form-control" maxlength="200" id="vou_desc" name="vou_desc"></textarea>
+                        
+                        <!-- Thêm span mới cho thông báo lỗi -->
+                        <span id="vou_desc-error" class="text-danger"></span>
                     </div>
                     <button type="submit" name="update_vou" class="btn btn-info">Save Voucher</button>
                 </form>
@@ -37,14 +40,26 @@
 
 <script>
     function validateForm() {
-        var vou_name = document.getElementById("pay_name").value;
+        var vou_name = document.getElementById("vou_name").value;
+        var vou_desc = document.getElementById("vou_desc").value;
+
+        // Kiểm tra trường Voucher's Name
         if (vou_name.trim() === "") {
             document.getElementById("vou_name-error").textContent = "Voucher's Name is required.";
             return false; // Prevent form submission
         } else {
             document.getElementById("vou_name-error").textContent = ""; // Clear any previous error messages
-            return true; // Allow form submission
         }
+
+        // Kiểm tra trường Voucher's Description
+        if (vou_desc.trim() === "") {
+            document.getElementById("vou_desc-error").textContent = "Voucher's Description is required.";
+            return false; // Prevent form submission
+        } else {
+            document.getElementById("vou_desc-error").textContent = ""; // Clear any previous error messages
+        }
+
+        return true; // Allow form submission
     }
 </script>
 @endsection
