@@ -269,7 +269,7 @@
 
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Brand</h3>
+							<h3 class="aside-title">Brands</h3>
 							<div class="checkbox-filter">
 								@foreach($manu as $key => $pro2)
 								<div>

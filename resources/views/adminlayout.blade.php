@@ -99,7 +99,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <span>Dashboard</span>
                             </a>
                         </li>
-
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Transportation</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/add-trans')}}">Add Transportation</a></li>
+                                <li><a href="{{URL::to('/all-trans')}}">Transportation List</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Payment Method</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/add-pay')}}">Add Payment Method</a></li>
+                                <li><a href="{{URL::to('/all-pay')}}">Payment Method List</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Voucher</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/add-vou')}}">Add Voucher</a></li>
+                                <li><a href="{{URL::to('/all-vou')}}">Voucher List</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Area</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/add-area')}}">Add Area</a></li>
+                                <li><a href="{{URL::to('/all-area')}}">Area List</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>User Information</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/add-info')}}">Add User Information</a></li>
+                                <li><a href="{{URL::to('/all-info')}}">All User Information</a></li>
+                            </ul>
+                        </li>
                         <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-book"></i>
