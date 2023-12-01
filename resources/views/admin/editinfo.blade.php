@@ -32,7 +32,7 @@
                         <label for="exampleInputPassword1">Payment Method</label>
                         <select name="info_pay" class="form-control m-bot15">
                             @foreach($pay_info as $key => $manu)
-                            <option selected value="{{($manu->pay_id)}}">{{($manu->pay_id)}}</option>
+                            <option selected value="{{($manu->pay_id)}}">{{($manu->pay_name)}}</option>
                             @endforeach
                         </select>
                     </div>

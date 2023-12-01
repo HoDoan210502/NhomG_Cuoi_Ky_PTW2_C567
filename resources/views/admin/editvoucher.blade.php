@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Voucher's Discount</label>
-                        <textarea value="{{($edit_value->vou_desc)}}" rows="8" class="form-control" maxlength="200" id="vou_desc" name="vou_desc"></textarea>
+                        <input type="number" value="{{($edit_value->vou_desc)}}" rows="8" class="form-control" maxlength="200" id="vou_desc" name="vou_desc"></input>
                         
                         <!-- Thêm span mới cho thông báo lỗi -->
                         <span id="vou_desc-error" class="text-danger"></span>

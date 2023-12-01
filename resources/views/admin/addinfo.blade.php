@@ -12,8 +12,7 @@
 
             <div class="position-center">
                 <form role="form" action="{{URL::to('/save_info')}}" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
-                    @csrf
-
+                {{csrf_field()}}
                     <div class="form-group">
                         <label for="exampleInputPassword1">User's Name</label>
                         <select name="info_user" class="form-control m-bot15">
@@ -35,7 +34,7 @@
                         <input type="number" class="form-control" id="info_number" placeholder="Info Number" name="info_number" required>
                         <span id="info_number-error" class="text-danger"></span>
                     </div>
-                    <button type="submit" name="add_info" class="btn btn-info">Add Product</button>
+                    <button type="submit" name="add_info" class="btn btn-info">Add User Information</button>
                 </form>
             </div>
         </div>

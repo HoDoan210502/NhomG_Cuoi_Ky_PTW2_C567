@@ -33,7 +33,7 @@ class InfoController extends Controller
     public function allInfo()
     {
         $this->AuthLogin();
-        $all_info = DB::table('tbl_info')->join('tbl_user', 'tbl_info.user_id', '=', 'tbl_user.user_id')->join('tbl_pay', 'tbl_pay.pay_id', '=', 'tbl_pay.pay_id')->orderBy('tbl_info.info_id', 'desc')->paginate(3);
+        $all_info = DB::table('tbl_info')->join('tbl_user', 'tbl_info.user_id', '=', 'tbl_user.user_id')->join('tbl_pay', 'tbl_info.pay_id', '=', 'tbl_pay.pay_id')->orderBy('tbl_info.info_id', 'desc')->paginate(3);
 
         return view('admin.allinfo')->with('all_info', $all_info);
     }
@@ -49,7 +49,7 @@ class InfoController extends Controller
         $data['info_number'] = $request->info_number;
         DB::table('tbl_info')->insert($data);
         Session::put('message', 'Thêm thành công');
-        return view('admin.addinfo');
+        return view('admin.dashboard');
     }
 
     //Sua San Pham

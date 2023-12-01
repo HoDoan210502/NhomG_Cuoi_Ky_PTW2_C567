@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Voucher's discount</label>
-                        <textarea type="password" rows="8" class="form-control" id="exampleInputPassword1" maxlength="200" placeholder="Description" name="vou_desc"></textarea>
+                        <input type="number" rows="8" class="form-control" id="exampleInputPassword1" maxlength="200" placeholder="Description" name="vou_desc"></input>
 
                         <!-- Thêm span mới cho thông báo lỗi -->
                         <span id="vou_desc-error" class="text-danger"></span>
